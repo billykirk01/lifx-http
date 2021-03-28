@@ -35,7 +35,8 @@ export class lifxClient {
         const response = await fetch(this.getApiUrl() + url, {
             method: method,
             headers: {
-                Authorization: "Bearer " + this.getToken(),
+                "Authorization": "Bearer " + this.getToken(),
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
         });
@@ -78,17 +79,8 @@ export class lifxClient {
     * 
     * `fast` - Execute the query fast, without initial state checks and wait for no results. `true` or `false`. Default is `false` if unspecified.
     *
-    * For example if you wanted to turn the light on to a pale blue at 50% brightness over 5 seconds, you'd send:
-    * ```{
-    *   "power": "on",
-    *   "color": "blue",
-    *   "saturation": 0.5,
-    *   "brightness": 0.5,
-    *   "duration": 5,
-    * }```
-    *
     * @param selector - The selector to limit which lights are controlled.
-    * @returns promise containing an array of light(s)
+    * @returns promise containing the response.
     */
     public setState(selector: string, state: Partial<State>) {
         return this.lifxRequest(`/lights/${selector}/state`, "PUT", state);
