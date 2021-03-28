@@ -32,13 +32,14 @@ export class lifxClient {
     }
 
     private async lifxRequest(url: string, method: string, data?: Record<string, unknown>) {
+        const json = JSON.stringify(data);
         const response = await fetch(this.getApiUrl() + url, {
             method: method,
             headers: {
                 "Authorization": "Bearer " + this.getToken(),
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(data),
+            body: json,
         });
         if (response.ok) {
             return response.json();
@@ -47,7 +48,7 @@ export class lifxClient {
                 url: response.url,
                 status: response.status,
                 statusText: response.statusText,
-                data: data
+                data: json
             });
         }
     }
