@@ -15,7 +15,7 @@ at your own risk.
 ## 📦 Importing
 
 ```typescript
-import { lifxClient } from "https://raw.githubusercontent.com/wkirk01/lifx-http/master/mod.ts";
+import { lifxClient } from "https://raw.githubusercontent.com/billykirk01/lifx-http/master/mod.ts";
 ```
 
 ## 📖 Example Usage
