@@ -1,16 +1,26 @@
-# LIFX-HTTP
+# lifx-http
 
-This is a thin wrapper of the [Lifx HTTP protocol](http://api.developer.lifx.com/).
+This library is not, in any way, affiliated or related to Lifi Labs, Inc.. Use
+at your own risk.
 
-This library makes use of native Fetch API's and pure Typescript ES Modules so it's perfect for a server side framework like [Deno](https://deno.land/) or for a client side application (like [this](https://github.com/wkirk01/LIFX-Svelte) one that I've built using [Svelte](https://svelte.dev/)).
+## ✨ Features
 
-This library is not, in any way, affiliated or related to Lifi Labs, Inc.. Use at your own risk.
+- Thin wrapper of the [Lifx HTTP protocol](http://api.developer.lifx.com/).
 
-Example usage:
+- Makes use of native Fetch API's and pure Typescript ES Modules so it's perfect
+  for a server side framework like [Deno](https://deno.land/) or for a client
+  side application (like [this](https://github.com/wkirk01/LIFX-Svelte) one that
+  I've built using [Svelte](https://svelte.dev/)).
+
+## 📦 Importing
 
 ```typescript
-import { lifxClient } from "https://raw.githubusercontent.com/wkirk01/LIFX-HTTP/master/lifx.ts";
+import { lifxClient } from "https://raw.githubusercontent.com/wkirk01/lifx-http/master/mod.ts";
+```
 
+## 📖 Example Usage
+
+```typescript
 const client = new lifxClient({
   token: "<Your LIFX API Token>",
 });
