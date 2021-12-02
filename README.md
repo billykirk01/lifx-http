@@ -15,7 +15,7 @@ at your own risk.
 ## 📦 Importing
 
 ```typescript
-import { lifxClient } from "https://raw.githubusercontent.com/billykirk01/lifx-http/master/mod.ts";
+import { lifxClient } from "https://deno.land/x/lifx-http/mod.ts";
 ```
 
 ## 📖 Example Usage
@@ -25,5 +25,5 @@ const client = new lifxClient({
   token: "<Your LIFX API Token>",
 });
 
-client.listLights("all").then(console.log);
+console.log(await client.getLights("all"));
 ```
