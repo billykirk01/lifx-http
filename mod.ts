@@ -61,7 +61,7 @@ export class lifxClient {
        * @param selector - The selector to limit which lights are returned.
        * @returns a promise containing an array of light(s)
        */
-    public listLights(selector: string): Promise<Light[]> {
+    public getLights(selector: string): Promise<Light[]> {
         return this.lifxRequest(`/lights/${selector}`, "GET");
     }
 
