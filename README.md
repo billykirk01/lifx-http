@@ -15,7 +15,7 @@ at your own risk.
 ## 📦 Importing
 
 ```typescript
-import { lifxClient } from "https://deno.land/x/lifx-http/mod.ts";
+import { lifxClient } from "https://deno.land/x/lifxhttp/mod.ts";
 ```
 
 ## 📖 Example Usage
